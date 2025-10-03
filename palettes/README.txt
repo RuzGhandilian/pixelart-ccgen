@@ -1,0 +1,1 @@
+Place your 8-color palette JSON here (e.g., global8.json).

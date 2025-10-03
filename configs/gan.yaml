@@ -1,0 +1,20 @@
+
+seed: 42
+data:
+  root: data/clean_16x16
+  labels_csv: data/labels.csv
+  image_size: 16
+  num_classes: 5
+  palette_json: palettes/global8.json
+train:
+  batch_size: 256
+  steps: 150000
+  outdir: outputs/gan
+optim:
+  g_lr: 0.0002
+  d_lr: 0.0002
+  betas: [0.0, 0.9]
+model:
+  z_dim: 128
+  ch: 64
+  palette_logits: true

@@ -1,0 +1,24 @@
+
+seed: 42
+data:
+  root: data/clean_16x16
+  labels_csv: data/labels.csv
+  image_size: 16
+  num_classes: 5
+  palette_json: palettes/global8.json
+train:
+  batch_size: 256
+  epochs: 300
+  outdir: outputs/ddpm
+optim:
+  lr: 0.0001
+  weight_decay: 0.0
+diffusion:
+  timesteps: 400
+  schedule: cosine
+  cfg_p_uncond: 0.1
+  guidance_scale: 2.0
+model:
+  base_channels: 64
+  ch_mult: [1, 2, 2]
+  palette_logits: true
